@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #5c3e94;
+  --secondary-color: #6c757d;
+  --background-color: #a7aae1;
+  --surface-color: #ffffff;
+  --text-color: #5c3e94;
+  --border-color: #dfe2e6;
+}
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.page-header {
+  background-color: #ffffff;
+  padding: 20px;
+}
+#page-title {
+  color: var(--primary-color); /* สีน้ําเงินเขม */
+  font-size: 24px;
+}
+.card {
+  background-color: var(--surface-color);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  margin: 10px;
+}
+a {
+  text-decoration-line: none;
+  color: white;
+  -moz-text-decoration-line: none;
+}
