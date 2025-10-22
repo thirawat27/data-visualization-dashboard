@@ -1,8 +1,10 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 :root {
-  --primary-color: #5c3e94;
+  --primary-color: #8259ce;
   --secondary-color: #6c757d;
   --background-color: #a7aae1;
   --surface-color: #ffffff;
@@ -14,23 +16,102 @@ body {
   font-family: "Prompt", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
-}
-.page-header {
-  background-color: #ffffff;
   padding: 20px;
 }
+
+.navbar {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 35px;
+  margin: 30px;
+  font-size: 20px;
+  background-color: var(--primary-color);
+  padding: 20px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+a {
+  text-decoration-line: none;
+  color: var(--surface-color);
+  -moz-text-decoration-line: none;
+  font-weight: bold;
+}
+
+a:hover {
+  color: var(--primary-color);
+  font-size: 20px;
+  background-color: var(--surface-color);
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30;
+  gap: 35px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.page-header {
+  margin: 15px;
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
 #page-title {
-  color: var(--primary-color); /* สีน้ําเงินเขม */
+  color: var(--text-color); /* สีน้ําเงินเขม */
   font-size: 24px;
+}
+.card-group {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
 .card {
   background-color: var(--surface-color);
-  padding: 20px;
+  padding: 90px;
   border: 1px solid var(--border-color);
-  margin: 10px;
+  box-shadow: 2px 2px 8px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  margin-top: 25px;
+  text-align: center;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
 }
-a {
-  text-decoration-line: none;
-  color: white;
-  -moz-text-decoration-line: none;
+.card-title {
+  font-size:30px;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+.card-description {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+.copyright {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   padding: 50px;
+   background-color: var(--primary-color);
+   color: white;
+   text-align: center;
 }
