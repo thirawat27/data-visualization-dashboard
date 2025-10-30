@@ -38,7 +38,7 @@ body {
   padding: 20px;
   border: 1px solid var(--border-color);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 a {
   color: var(--surface-color);
@@ -88,4 +88,17 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .dasboard-container {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    padding: 10px;
+  }
+  .main-content {
+    grid-template-columns: 1fr;
+  } 
 }
