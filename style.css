@@ -37,9 +37,8 @@ body {
   background-color: var(--surface-color);
   padding: 20px;
   border: 1px solid var(--border-color);
-  margin: 10px;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px -1px, rgb(42, 41, 41) 0 0px 2px 4px -1px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 a {
   color: var(--surface-color);
@@ -51,7 +50,6 @@ a {
 }
 .sidebar {
   width: 250px;
-  height: 100vh;
   padding: 20px;
   background-color: var(--primary-color);
 }
@@ -86,5 +84,8 @@ a {
 }
 .main-content {
   flex-grow: 1;
-  padding: 25px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
