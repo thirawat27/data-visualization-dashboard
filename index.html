@@ -1,55 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="dist/output.css">
+    
+    <script src="./main.js" defer></script>
+
+    <title>Data Visualization Dashboard</title>
 </head>
 
-<body>
+<body class="bg-gray-100 font-sans">
 
-    <header class="page-header">
-        <h1 id="page-title">Data Visualization Dashboard</h1>
-        <div class="user-profile">
-            <span>ยินดีต้อนรับ ,thirawat27</span>
+    <header class="flex justify-between items-center p-5 bg-white shadow-md relative z-20">
+        
+        <div class="flex items-center gap-4">
+            <button id="hamburger-btn" class="md:hidden text-gray-800 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <h1 id="page-title" class="text-xl font-bold text-gray-800 cursor-pointer select-none">
+                Data Dashboard
+            </h1>
+        </div>
+
+        <div class="text-sm text-gray-600 hidden sm:block">
+            <span>ยินดีต้อนรับ, User Name</span>
         </div>
     </header>
-    <div class="dasboard-container">
-        <aside class="sidebar">
+
+    <div class="flex flex-col md:flex-row relative min-h-screen">
+
+        <aside id="sidebar" class="
+            sidebar 
+            bg-white w-64 p-5 shadow-lg z-10
+            absolute inset-y-0 left-0 
+            transform -translate-x-full transition-transform duration-300
+            md:relative md:translate-x-0
+        ">
             <nav>
-                <ul>
-                    <li><a href="https://youtu.be/xvFZjo5PgG0?si=NINEIcSWktyEf2qm" target="_blank">Dashboard</a></li>
-                    <li><a href="https://youtu.be/xvFZjo5PgG0?si=NINEIcSWktyEf2qm" target="_blank">Product</a></li>
-                    <li><a href="https://youtu.be/xvFZjo5PgG0?si=NINEIcSWktyEf2qm" target="_blank">Customers</a></li>
+                <ul class="flex flex-col gap-2">
+                    <li><a href="#" class="block p-3 rounded hover:bg-gray-100 text-gray-700 font-medium">Dashboard</a></li>
+                    <li><a href="#" class="block p-3 rounded hover:bg-gray-100 text-gray-700 font-medium">Products</a></li>
+                    <li><a href="#" class="block p-3 rounded hover:bg-gray-100 text-gray-700 font-medium">Customers</a></li>
+                    <li><a href="#" class="block p-3 rounded hover:bg-gray-100 text-gray-700 font-medium">Reports</a></li>
                 </ul>
             </nav>
         </aside>
-        <main class="main-content">
-            <div class="card">
-                <h2>ยอดขายรวม</h2>
-                <p>1,234,567 บาท</p>
+
+        <main class="flex-grow p-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h2 class="text-xl font-bold mb-2 text-blue-600">ยอดขายรวม</h2>
+                <p class="text-3xl font-bold text-gray-800" id="total-sales">กำลังโหลด....</p>
+                <p class="text-sm text-green-500 mt-2">ยอดขายที่มีทั้งหมดในระบบ</p>
             </div>
-            <div class="card">
-                <h2>ผู้ใช้งานใหม่</h2>
-                <p>352 คน</p>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h2 class="text-xl font-bold mb-2 text-purple-600">จำนวนสินค้าที่มีในระบบ</h2>
+                <p class="text-3xl font-bold text-gray-800" id="total-products">กำลังโหลด....</p>
+                <p class="text-sm text-green-500 mt-2">รายการสินค้าทั้งหมด</p>
             </div>
-            <div class="card">
-                <h2>คําสั่งซื้อ</h2>
-                <p>89 รายการ</p>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+                <h2 class="text-xl font-bold mb-2 text-orange-600">ยอดขายที่มีทั้งหมด (ชิ้น)</h2>
+                <p class="text-3xl font-bold text-gray-800" id="total-sales-count">กำลังโหลด....</p>
+                <p class="text-sm text-gray-500 mt-2">จำนวนสินค้าที่มีขายออก</p>
             </div>
 
         </main>
+        
     </div>
-    <footer>
+
+    <footer class="p-4 text-center text-gray-500 text-sm">
+        &copy; 2025 Data Dashboard Project
     </footer>
 
 </body>
-
 </html>
